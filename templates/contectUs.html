@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Store</title>
+    <style>
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        form button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #messageContainer {
+            margin-top: 15px;
+            color: green;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Phone Store</h1>
+    </header>
+
+    <main>
+        <div class="phone">
+            <!-- Phone details... -->
+        </div>
+
+        <form action="#" method="post" onsubmit="return validateForm()">
+            <h2>Contact Us</h2>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+            
+            <div id="messageContainer"></div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Phone Store</p>
+    </footer>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            
+            if (!name || !email || !message) {
+                displayMessage("All fields are required.", "error");
+                return false;
+            }
+            var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)) {
+                displayMessage("Please enter a valid email address.", "error");
+                return false;
+            }
+
+           
+            displayMessage("Message sent successfully!", "success");
+
+            
+            return false;
+        }
+
+        function displayMessage(message, className) {
+            var messageContainer = document.getElementById("messageContainer");
+            messageContainer.innerHTML = "<p class='" + className + "'>" + message + "</p>";
+        }
+    </script>
+
+</body>
+</html>

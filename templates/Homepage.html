@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .phone {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="/">Logout</a> 
+        <a href="/contectUs">Contact Us</a> 
+        <h1>Phone Store</h1>
+    </header>
+
+    <section>
+        <div>
+            <select>
+                <option>Select City</option>
+                
+            </select>
+            <input type="text" placeholder="Enter Keywords here ...">
+        </div>
+    </section>
+
+    <main>
+        <section>
+            <h2>Sell Mobile</h2>
+            <div>
+                <a href="#">Apple</a>
+                <a href="#">Samsung</a>
+                <a href="#">Google</a>
+                
+            </div>
+        </section>
+
+        <section>
+            <h2>How to Use</h2>
+            <ol>
+                <li>Get An Offer. It’s Instant! Select your used Gadget and get a free immediate quote in just seconds.</li>
+                <li>Schedule A Free Doorstep Pickup. Schedule the free pickup for your second-hand Gadget.</li>
+                <li>Get Paid. It’s Fast! Technician will inspect your Gadget, and you’ll get your payment fast for your old Gadget.</li>
+            </ol>
+        </section>
+
+        
+        <button onclick="location.href='#sell-old-phone';">Sell Your Old Phone</button>
+    </main>
+
+    <section id="sell-old-phone">
+        <h2>Sell Your Old Phone</h2>
+        <p>Provide information and instructions on how users can sell their old phones.</p>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Phone Store</p>
+    </footer>
+
+</body>
+</html>
