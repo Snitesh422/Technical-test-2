@@ -30,9 +30,10 @@ python app.py
 ```
 
 ## Output
+
 ### Login (Signin)
 <img src='https://github.com/Snitesh422/Technical-task/issues/1#issue-2048570145' width="50%" ></img> <br><br>
-### Homepage
+### Homepage (Homepage)
 <img src='https://github.com/Snitesh422/Technical-task/issues/1#issuecomment-1862681111' width="50%" ></img> <br><br>
 ### Registration (Signup)
 <img src='https://github.com/Snitesh422/Technical-task/issues/1#issuecomment-1862680730' width="50%" ></img> <br><br>
